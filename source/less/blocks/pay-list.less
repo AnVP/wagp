@@ -1,0 +1,109 @@
+.pay-list {
+  .list-style();
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 65px;
+    height: 55px;
+    margin-right: 8px;
+
+    &--master {
+      width: 28px;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    width: 65px;
+    height: 55px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--autorize {
+      background-image: url("../img/authorize@1x.png");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/authorize@2x.png");
+        background-size: 65px auto;
+      }
+    }
+
+    &--visa {
+      background-image: url("../img/visa.png");
+    }
+
+    &--master {
+      width: 28px;
+
+      background-image: url("../img/master-card.png");
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .pay-list {
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    &__item {
+      width: 75px;
+      height: 65px;
+
+      &--visa {
+        display: none;
+      }
+  
+      &--master {
+        display: none;
+      }
+    }
+  
+    &__link {
+      display: block;
+  
+      width: 75px;
+      height: 65px;
+  
+      background-repeat: no-repeat;
+      background-position: center;
+  
+      &--autorize {
+        background-image: url("../img/authorize-796@1x.png");
+  
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../img/authorize-796@2x.png");
+          background-size: 75px auto;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @tablet-max-width) {
+  .pay-list {
+    &__item {
+      &--visa {
+        display: block;
+      }
+  
+      &--master {
+        display: block;
+      }
+    }
+
+
+    &__link {
+      &--visa {
+        background-image: url("../img/visa-796@1x.png");
+      }
+  
+      &--master {
+        background-image: url("../img/master-card-796@1x.png");
+      }
+    }
+  }
+}

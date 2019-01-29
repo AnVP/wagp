@@ -1,0 +1,27 @@
+.social-list {
+  .list-style();
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  &__item {
+    width: 28px;
+    height: 16px;
+  }
+
+  &__link {
+    display: block;
+    width: 28px;
+    height: 16px;
+
+    color: @footer-link-color;
+
+    &:focus,
+    &:hover,
+    &:active,
+    &--active {
+      color: @white-color;
+    }
+  }
+}

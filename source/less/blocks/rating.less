@@ -1,0 +1,26 @@
+.rating {
+  .list-style();
+
+  display: flex;
+
+  & li {
+    width: 18px;
+    height: 18px;
+
+    margin-right: 5px;
+
+    background-image: url("../img/star@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/star@2x.png");
+      background-size: 18px auto;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

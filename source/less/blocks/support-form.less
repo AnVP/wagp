@@ -1,0 +1,147 @@
+.support-form {
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    color: @dark-blue;
+
+    &--name {
+      color: @form-color;
+    }
+  }
+
+  &__input {
+    box-sizing: border-box;
+    padding: 20px 18px;
+    margin-bottom: 20px;
+
+    font: inherit;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+
+    border: 1px solid @input-color;
+    border-left: none;
+
+    &--text {
+      width: 100%;
+
+      resize: none;
+    }
+  }
+
+  &__list {
+    .list-style();
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__recaptcha {
+    width: 280px;
+    height: 87px;
+
+    background-image: url("../img/recaptcha@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/recaptcha@2x.jpg");
+      background-size: 280px;
+    }
+  }
+
+  &__description {
+    width: 280px;
+
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    color: @ligth-black;
+  }
+
+  &__services {
+    color: @ligth-black;
+
+    border-bottom: 1px solid @input-color;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: @blur-color;
+    }
+  }
+
+  &__privacy {
+    color: @form-color;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: @blur-color;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 35px;
+    margin-top: 40px;
+
+    font-size: 18px;
+    line-height: 33px;
+    color: @white-color;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: @form-color;
+    border: none;
+
+    cursor: pointer;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: @blur-color;
+    }
+  }
+}
+
+@media (min-width: @tablet-min-width) {
+  .support-form {
+    &__button {
+      width: 214px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .support-form {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 291px;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__button {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.about {
+  &__container {
+    background-image: url("../img/bg-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: center 70px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-mobile@2x.png");
+      background-size: 256px auto;
+    }
+  }
+
+  &__wrapper {
+    min-width: 310px;
+  }
+
+  &__title {
+    padding-bottom: 240px;
+  }
+
+  &__list {
+    .list-style();
+  }
+
+  &__item {
+    padding-left: 34px;
+    margin-bottom: 20px;
+
+    background-image: url("../img/tick@1x.png");
+    background-repeat: no-repeat;
+    background-position: left 5px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/tick@2x.png");
+      background-size: 16px auto;
+    }
+  }
+}
+
+@media (min-width: @tablet-min-width) {
+  .about {
+    &__container {
+      background-position: right center;
+    }
+    
+    &__title {
+      padding-bottom: 30px;
+    }
+
+    &__wrapper {
+      width: 336px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width){
+  .about {
+    &__container {
+      background-image: url("../img/bg-796@1x.png");
+      background-position: left center;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/bg-796@2x.png");
+        background-size: 424px auto;
+      }
+    }
+    &__wrapper {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (min-width: @tablet-max-width) {
+  .about {
+    &__container {
+      background-size: 504px auto;
+    }
+    &__wrapper {
+      width: 388px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    &__container {
+      background-size: 582px auto;
+    }
+
+    &__wrapper {
+      width: 465px;
+    }
+  }
+}

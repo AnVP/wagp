@@ -1,0 +1,56 @@
+.main-page {
+  display: block;
+  
+  padding-top: 80px;
+
+  &__about {
+    margin-bottom: 110px;
+  }
+
+  &__services {
+    margin-bottom: 70px;
+  }
+
+  &__testimonials {
+    margin-bottom: 30px;
+  }
+
+  &__pagination {
+    margin-bottom: 94px;
+  }
+}
+
+@media (min-width: @tablet-min-width) {
+  .main-page {
+    padding-top: 60px;
+
+    &__about {
+      margin-bottom: 138px;
+    }
+
+    &__services {
+      margin-bottom: 100px;
+    }
+
+    
+  &__testimonials {
+    margin-bottom: 52px;
+  }
+  }
+}
+
+@media (min-width: @tablet-max-width) {
+  &__pagination {
+    margin-bottom: 136px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-page {
+    padding-top: 100px;
+
+    &__about {
+      margin-bottom: 150px;
+    }
+  }
+}

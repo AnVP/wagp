@@ -1,0 +1,349 @@
+.services {
+  background-color: @bg-color;
+
+  &__container {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -50%;
+      z-index: 1;
+    
+      width: 1px;
+      height: 1px;
+    
+      background-color: transparent;
+      border-top: 70px solid @white-color;
+      border-right: 450px solid @white-color;
+      border-bottom: 70px solid transparent;
+      border-left: 450px solid transparent;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -50%;
+      z-index: 1;
+    
+      width: 1px;
+      height: 1px;
+    
+      background-color: transparent;
+      border-top: 70px solid transparent;
+      border-right: 450px solid transparent;
+      border-bottom: 70px solid @white-color;
+      border-left: 450px solid @white-color;
+    }
+  }
+  
+  &__title {
+    position: absolute;
+    top: -20px;
+    z-index: 10;
+  }
+
+  &__individual {
+    position: relative;
+    padding-top: 80px;
+  }
+
+  &__one {
+    padding-left: 10px;
+
+    font-size: 85px;
+    font-weight: 700;
+    color: @ligth-color;
+  }
+
+  &__description {
+    position: absolute;
+    top: 82px;
+    left: 0;
+
+    font-size: 20px;
+    font-weight: 400;
+    color: @blur-color;
+  }
+
+  &__important {
+    font-weight: 500;
+    color: @ligth-black;
+  }
+
+  &__video {
+    position: relative;
+    z-index: 10;
+
+    width: 310px;
+    height: 171px;
+    margin-top: 40px;
+
+    background-image: url("../img/macbook@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/macbook@2x.png");
+      background-size: 321px auto;
+    }
+  }
+
+  &__img {
+    display: block;
+
+    width: 237px;
+    height: 160px;
+    margin: 5px auto;
+  }
+
+  &__video-description {
+    position: absolute;
+    bottom: 24px;
+    right: 60px;
+
+    font-size: 11px;
+    font-weight: 500;
+    color: @white-color;
+  }
+
+  &__button {
+    display: none;
+
+    position: absolute;
+    top: 50px;
+    left: 140px;
+
+    width: 46px;
+    height: 52px;
+
+    background-color: transparent;
+    border: none;
+
+    background-image: url("../img/video-start@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.services__video:hover .services__button {
+  display: block;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-min-width) {
+  .services {
+    &__title {
+      top: -70px;
+    }
+
+    &__individual {
+      padding-top: 100px;
+    }
+
+    &__description {
+      top: 102px;
+    }
+
+    &__video {
+      width: 507px;
+      height: 271px;
+      margin-left: auto;
+      margin-right: auto;
+  
+      background-image: url("../img/macbook-602@1x.png");
+  
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/macbook-602@2x.png");
+        background-size: 507px auto;
+      }
+    }
+
+    &__img {
+      width: 377px;
+      height: 254px;
+    }
+
+    &__video-description {
+      bottom: 44px;
+      right: 100px;
+    }
+
+    &__button {
+      top: 100px;
+      left: 240px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .services {
+    &__container {
+      &::before {
+        left: 450px;
+        width: 760px;
+        height: 100%;
+
+        background-color: @white-color;
+        border: none;
+      }
+  
+      &::after {
+        bottom: 0;
+        left: 350px;
+      
+        border-top: 270px solid transparent;
+        border-right: 50px solid @white-color;
+        border-bottom: 270px solid @white-color;
+        border-left: 50px solid transparent;
+      }
+    }
+
+    &__individual {
+      padding-top: 70px;
+    }
+
+    &__one {
+      font-size: 90px;
+    }
+  
+    &__description {
+      top: 72px;
+      font-size: 25px;
+    }
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+
+    &__column {
+      width: 340px;
+    }
+
+    &__video {
+      margin: 0;
+      width: 429px;
+      height: 229px;
+
+      background-image: url("../img/macbook-796@1x.png");
+  
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/macbook-796@2x.png");
+        background-size: 429px auto;
+      }
+    }
+
+    &__img {
+      width: 319px;
+      height: 215px;
+    }
+
+    &__video-description {
+      bottom: 30px;
+      right: 90px;
+
+      font-size: 14px;
+    }
+
+    &__button {
+      top: 80px;
+      left: 190px;
+    }
+  }
+}
+
+@media (min-width: @tablet-max-width) {
+  .services {
+    &__column {
+      width: 420px;
+    }
+
+    &__video {
+      width: 507px;
+      height: 271px;
+
+      background-image: url("../img/macbook-602@1x.png");
+  
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/macbook-602@2x.png");
+        background-size: 507px auto;
+      }
+    }
+
+    &__img {
+      width: 377px;
+      height: 254px;
+    }
+
+    &__container {
+      &::before {
+        left: 563px;
+      }
+  
+      &::after {
+        left: 463px;
+      }
+    }
+  
+    &__video-description {
+      bottom: 44px;
+      right: 100px;
+    }
+
+    &__button {
+      top: 100px;
+      left: 240px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .services {
+    &__column {
+      width: 485px;
+    }
+    
+    &__container {
+      &::before {
+        left: 658px;
+      }
+  
+      &::after {
+        left: 558px;
+      }
+    }
+
+    &__video {
+      width: 624px;
+      height: 332px;
+
+      background-image: url("../img/macbook-1184@1x.png");
+  
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/macbook-1184@2x.png");
+        background-size: 624px auto;
+      }
+    }
+
+    &__img {
+      width: 464px;
+      height: 312px;
+    }
+
+    &__video-description {
+      bottom: 54px;
+      right: 140px;
+      font-size: 20px;
+    }
+
+    &__button {
+      top: 120px;
+      left: 290px;
+    }
+  }
+}
